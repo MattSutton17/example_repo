@@ -1,5 +1,13 @@
 class Yatzy:
 
+    def __init__(self, d1, d2, d3, d4, d5):
+        self.dice = [0]*5
+        self.dice[0] = d1
+        self.dice[1] = d2
+        self.dice[2] = d3
+        self.dice[3] = d4
+        self.dice[4] = d5
+
     @staticmethod
     def chance(d1, d2, d3, d4, d5):
         rolls = [d1,d2,d3,d4,d5]
@@ -11,59 +19,18 @@ class Yatzy:
     
     @staticmethod
     def ones( d1,  d2,  d3,  d4,  d5):
-        sum = 0
-        if (d1 == 1):
-            sum += 1
-        if (d2 == 1):
-            sum += 1
-        if (d3 == 1):
-            sum += 1
-        if (d4 == 1):
-            sum += 1
-        if (d5 == 1): 
-            sum += 1
-
-        return sum
-    
+        rolls = [d1,d2,d3,d4,d5]
+        return rolls.count(1)
 
     @staticmethod
     def twos( d1,  d2,  d3,  d4,  d5):
-        sum = 0
-        if (d1 == 2):
-             sum += 2
-        if (d2 == 2):
-             sum += 2
-        if (d3 == 2):
-             sum += 2
-        if (d4 == 2):
-             sum += 2
-        if (d5 == 2):
-             sum += 2
-        return sum
-    
+        rolls = [d1,d2,d3,d4,d5]
+        return rolls.count(2)*2
+        
     @staticmethod
     def threes( d1,  d2,  d3,  d4,  d5):
-        s = 0
-        if (d1 == 3):
-             s += 3
-        if (d2 == 3):
-             s += 3
-        if (d3 == 3):
-             s += 3
-        if (d4 == 3):
-             s += 3
-        if (d5 == 3):
-             s += 3
-        return s
-    
-
-    def __init__(self, d1, d2, d3, d4, _5):
-        self.dice = [0]*5
-        self.dice[0] = d1
-        self.dice[1] = d2
-        self.dice[2] = d3
-        self.dice[3] = d4
-        self.dice[4] = _5
+        rolls = [d1,d2,d3,d4,d5]
+        return rolls.count(3)*3
     
     def fours(self):
         sum = 0
